@@ -1,0 +1,14 @@
+{
+  "name": "q-torial",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predeploy": "npm --prefix functions run lint && npm --prefix functions run build",
+    "deploy": "NODE_ENV=production && npm run predeploy && node scripts/deploy.js",
+    "deploy:dev": "NODE_ENV=development && npm run predeploy && node scripts/deploy.js"
+  },
+  "devDependencies": {
+    "@google-cloud/storage": "^5.0.1",
+    "archiver": "^4.0.1"
+  }
+}

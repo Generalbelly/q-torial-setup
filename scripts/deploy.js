@@ -78,8 +78,8 @@ const main = async () => {
   const bucketName = process.env.NODE_ENV === 'production' ? 'q-torial' : 'still-protocol-228301';
   await upload(bucketName, path.join(destZipDir, zipFilename), `functions/${zipFilename}`);
   await upload(bucketName, path.join(__dirname, '../firestore.indexes.json'), 'firestore.indexes.json');
-  await upload(bucketName, path.join(__dirname, '../firestore.rules'), 'firestore.rules');
-  await upload(bucketName, path.join(__dirname, '../storage.rules'), 'storage.rules');
+  // await upload(bucketName, path.join(__dirname, '../firestore.rules'), 'firestore.rules');
+  // await upload(bucketName, path.join(__dirname, '../storage.rules'), 'storage.rules');
 };
 
 (async () => {
